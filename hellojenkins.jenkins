@@ -27,7 +27,7 @@ pipeline{
         stage("Script Python"){
             steps{
                 script{
-                    readFile(file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py')
+                    def data = readFile(file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py')
                 }
             }
         }
