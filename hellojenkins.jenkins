@@ -19,7 +19,7 @@ pipeline{
         stage("My file python"){
             steps{
                 script{
-                    loadFile = File "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py"
+                    loadFile = file "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py"
                     println(loadFile)
                 }
             }
