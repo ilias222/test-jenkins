@@ -29,7 +29,7 @@ pipeline{
                 script{
                     bat'''
                     @chcp 1251
-                    py -3 "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py"
+                    python "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py"
                     '''
                 }
             }
