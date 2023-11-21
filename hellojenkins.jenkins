@@ -27,8 +27,7 @@ pipeline{
         stage("Script Python"){
             steps{
                 script{
-                    dir "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile"
-                    
+                    readFile(file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py')
                 }
             }
         }
