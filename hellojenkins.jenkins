@@ -24,6 +24,16 @@ pipeline{
                 }
             }
         }
+        stage("Script Python"){
+            steps{
+                script{
+                    bat'''
+                    @chcp 1251
+                    py -3 "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py"
+                    '''
+                }
+            }
+        }
     
     }
 }
