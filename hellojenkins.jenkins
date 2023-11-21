@@ -27,7 +27,7 @@ pipeline{
         stage("Script Python"){
             steps{
                 script{
-                    bat'''
+                    sh'''
                     mkdir ./pyFile
                     mv ./main.py ./pyFile
                     '''
