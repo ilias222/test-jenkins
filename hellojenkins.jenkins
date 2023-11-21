@@ -4,7 +4,9 @@
 
 pipeline{
     agent any
+
     triggers { pollSCM('* * * * *') }
+
     options{
         timestamps()
         }
@@ -12,6 +14,14 @@ pipeline{
         stage("Hello World"){
             steps{
                 echo "========executing A========"
+            }
+        }
+        stage("My file python"){
+            steps{
+                script{
+                    loadFile = File "C:\ProgramData\Jenkins\.jenkins\workspace\GitPaiplain\main.py"
+                    println(loadFile)
+                }
             }
         }
     
