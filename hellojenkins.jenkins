@@ -27,10 +27,8 @@ pipeline{
         stage("Script Python"){
             steps{
                 script{
-                    sh'''
-                    mkdir C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile
-                    mv C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile
-                    '''
+                    sh 'mkdir "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile"'
+                    
                 }
             }
         }
