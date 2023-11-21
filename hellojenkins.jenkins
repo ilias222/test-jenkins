@@ -27,7 +27,7 @@ pipeline{
         stage("Script Python"){
             steps{
                 script{
-                    sh 'mkdir "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile"'
+                    mkdir "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile"
                     
                 }
             }
