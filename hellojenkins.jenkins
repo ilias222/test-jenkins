@@ -28,8 +28,8 @@ pipeline{
             steps{
                 script{
                     sh'''
-                    mkdir ./pyFile
-                    mv ./main.py ./pyFile
+                    mkdir C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile
+                    mv C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\pyFile
                     '''
                 }
             }
