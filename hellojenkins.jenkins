@@ -21,6 +21,7 @@ pipeline{
                 script{
                     def data = readFile(file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py')
                     println(data)
+                    sh 'echo lab'
                 }
             }
         }
