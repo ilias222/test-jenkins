@@ -18,10 +18,10 @@ pipeline{
         }
         stage("Script Python"){
             steps{
+                sh 'echo "Hello World"'
                 script{
                     def data = readFile(file: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py')
                     println(data)
-                    sh 'echo "Hello World"'
                 }
             }
         }
