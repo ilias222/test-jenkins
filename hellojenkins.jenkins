@@ -16,14 +16,6 @@ pipeline{
                 echo "========executing A========"
             }
         }
-        stage("My file python"){
-            steps{
-                script{
-                    loadFile = file "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\GitPaiplain\\main.py"
-                    println(loadFile)
-                }
-            }
-        }
         stage("Script Python"){
             steps{
                 script{
