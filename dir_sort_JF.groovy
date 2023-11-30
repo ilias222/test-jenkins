@@ -21,7 +21,6 @@ pipeline {
         %PYTHON_ENV% %JENKINS_HOME%%PATH_PYTHON% %DIR_NAME%
         '''
 
-
       }
     }
   }

@@ -21,6 +21,7 @@ except:
         constPatch += ' ' + argv[call]
 
     listFile = os.listdir(constPatch)
+    
 
 #---------- Сортировка и вывод -----------------
 for item in listFile:
