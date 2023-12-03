@@ -24,14 +24,19 @@ except:
     
 
 #---------- Сортировка и вывод -----------------
+with open('list_dir.txt', 'w') as f:
+    f.write('---------' + constPatch + '---------\n')
+    
 for item in listFile:
     try:
         # Год создания объекта (файла/папки)
         oldYar = time.localtime(os.path.getctime(os.path.join(constPatch, item)))
 
-        # Если объект папка и она старше года
-        if os.path.isdir(os.path.join(constPatch, item)) and int((localYar - time.mktime(oldYar)) / 31536000):
-            print(item)
+        with open('list_dir.txt', 'a') as f:
+            # Если объект папка и она старше года
+            if os.path.isdir(os.path.join(constPatch, item)) and int((localYar - time.mktime(oldYar)) / 31536000):
+                print(item)
+                f.write(item + '\n')
     except:
         # Сюда попали если файл в данное время не активен
         print('net ebuchego fails blyad')

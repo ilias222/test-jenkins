@@ -1,5 +1,9 @@
 pipeline {
   agent any
+
+  options {
+        timeout(time: 5, unit: 'MINUTES') 
+    }
   
   environment {
 
@@ -10,18 +14,20 @@ pipeline {
 }
 
     stages{
-    stage("deploy") {
+    stage("Выполнение скрипта") {
       steps {
-
-        echo "Calling multi line batch command"
         bat '''
-        echo %DIR_NAME% 
-        echo %JENKINS_HOME%%PATH_PYTHON%
-        
+        @chcp 1251
         %PYTHON_ENV% %JENKINS_HOME%%PATH_PYTHON% %DIR_NAME%
         '''
 
       }
     }
   }
+
+  post{
+      success{
+        archiveArtifacts 'list_dir.txt'
+      }
+    }
 }
